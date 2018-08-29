@@ -42,23 +42,57 @@ import './index.css';
 
 // Composing Components START
 
-function Welcome(props) {
-  return <h1>Hello, {props.name}</h1>;
-}
+// function Welcome(props) {
+//   return <h1>Hello, {props.name}</h1>;
+// }
 
-function App() {
-  return (
-    <div>
-      <Welcome name="doesitmatter whoknows" />
-      <Welcome name="doesitmatter whocares" />
-    </div>
-  );
-}
+// function App() {
+//   return (
+//     <div>
+//       <Welcome name="doesitmatter whoknows" />
+//       <Welcome name="doesitmatter whocares" />
+//     </div>
+//   );
+// }
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+// ReactDOM.render(
+//   <App />,
+//   document.getElementById('root')
+// );
 
 // Composing Components END
 
+// State START
+
+// Before adding state
+// class Welcome extends React.Component {
+//   render() {
+//     return <h1>Hello, {this.props.name}</h1>;
+//   }
+// }
+
+// ReactDOM.render(
+//   <Welcome name="doesitmatter whoknows"/>,
+//   document.getElementById('root')
+// );
+
+// After adding state
+class Welcome extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: 'initial state'
+    };
+  }
+
+  render() {
+    return <h1>Hello, {this.state.name}</h1>
+  }
+}
+
+ReactDOM.render(
+  <Welcome />,
+  document.getElementById('root')
+);
+
+// State END

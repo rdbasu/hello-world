@@ -162,4 +162,72 @@ ReactDOM.render(
   document.getElementById('root')
 );
 ```
-:exclamation: - _all React components must act like pure functions with respect to their props_
+:exclamation: _all React components must act like pure functions with respect to their props_
+
+## Step 14 *State*
+
+we can add *state* to any _component_
+to add a **state**, we need to convert the _functional components_ to _class components_
+
+we start with the _functional component_
+
+```
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+```
+
+* create an `ES6` class that extends _React.Component_
+* Add a single empty method to it called _render()_ & move the body of the function into the _render()_ method
+* Replace props with this.props
+
+```
+class Welcome extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+```
+now we will add *state* to this _react component_
+
+```
+constructor(props) {
+  super(props);
+  this.state = {name: 'initial state'};
+}
+```
+change the code above to this :point_down:
+
+```
+class Welcome extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: 'initial state'
+    };
+  }
+
+  render() {
+    return <h1>Hello, {this.state.name}</h1>
+  }
+}
+
+ReactDOM.render(
+  <Welcome />,
+  document.getElementById('root')
+);
+```
+
+:exclamation: _Do Not Modify State Directly_
+
+:x: `this.state.comment = 'Hello';`
+
+:white_check_mark: `this.setState({comment: 'Hello'});`
+
+_State Updates May Be Asynchronous_
+
+_State Updates are Merged_
+
+## Step 15 *Handling Events*
+
+*TBD*
