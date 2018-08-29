@@ -167,6 +167,7 @@ ReactDOM.render(
 ## Step 14 *State*
 
 we can add *state* to any _component_
+
 to add a **state**, we need to convert the _functional components_ to _class components_
 
 we start with the _functional component_
