@@ -100,6 +100,7 @@ _react elements are `immutable`_.
 _the only way to update the UI is to `create a new element, and pass it to ReactDOM.render()`_
 
 ## Step 12 *Components and Props* (**THIS IS REACT**)
+`************************* S E C T I O N - III *************************` in _index.js_
 
 _split the UI into independent, reusable pieces_ use **COMPONENTS**
 
@@ -131,6 +132,7 @@ ReactDOM.render(
 pass `{name: 'doesitmatter whoknows'}` as the props
 
 ## Step 13 *Composing Components*
+`************************* S E C T I O N - IV *************************` in _index.js_
 
 a REACT application is an _amalgamation_ of *multiple components* _intertwined_ with each other - _rdbasu_
 
@@ -165,6 +167,7 @@ ReactDOM.render(
 :exclamation: _all React components must act like pure functions with respect to their props_
 
 ## Step 14 *State*
+`************************* S E C T I O N - V *************************` in _index.js_
 
 we can add *state* to any _component_
 
@@ -232,3 +235,9 @@ _State Updates are Merged_
 ## Step 15 *Handling Events*
 
 *TBD*
+
+## Step 16 *Lifting State Up*
+`************************* S E C T I O N - VI *************************` in _index.js_
+
+_sharing state is accomplished by moving it up to the closest common ancestor of the components that need it_
+

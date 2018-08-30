@@ -1,14 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import MessageBot from './message-bot'
+import MessageBotFixed from './message-bot-fixed'
+import FunctionalComponent from './functional-component'
+import ClassComponent from './class-component'
 
-// Comment before Step 10
+// UNCOMMENT EACH SECTION TO SEE THE RESULTS ON YOUR BROWSER
+
+// ************************* S E C T I O N - I *************************
+
+// Basic ... very basic REACT ***** START *****
 // ReactDOM.render(
 //   <h1>Hello, world!</h1>,
 //   document.getElementById('root')
 // );
+// Basic ... very basic REACT ***** START *****
 
-// JSX START
+// ************************* S E C T I O N - II *************************
+
+// JSX ***** START *****
 // const name = 'doesitmatter whoknows';
 // const element = <h1>Hello, {name}</h1>;
 
@@ -16,31 +27,31 @@ import './index.css';
 //   element,
 //   document.getElementById('root')
 // );
-// JSX END
+// JSX ***** END *****
 
-// Components & Rendering START
+// ************************* S E C T I O N - III *************************
 
-// Functional Component
-// function Welcome(props) {
-//   return <h1>Hello, {props.name}</h1>;
-// }
+// Components & Rendering ***** START *****
 
-// Class Component
-// class Welcome extends React.Component {
-//   render() {
-//     return <h1>Hello, {this.props.name}</h1>;
-//   }
-// }
-
-// Rendering Component *Welcome*
+// Functional Component & Rendering Component
 // ReactDOM.render(
-//     <Welcome name="doesitmatter whoknows" />, // call Welcome with *{name: 'doesitmatter whoknows'}* as the props
+//     // call FunctionalComponent with *{name: 'functional component'}* as the props
+//     <FunctionalComponent name="functional component" />, 
 //     document.getElementById('root')
 // );
 
-// Components & Rendering END
+// Class Component & Rendering Component
+// ReactDOM.render(
+//     // call ClassComponent with *{name: 'class component'}* as the props
+//     <ClassComponent name="class component" />, 
+//     document.getElementById('root')
+// );
 
-// Composing Components START
+// Components & Rendering ***** END *****
+
+// ************************* S E C T I O N - IV *************************
+
+// Composing Components ***** START *****
 
 // function Welcome(props) {
 //   return <h1>Hello, {props.name}</h1>;
@@ -60,9 +71,11 @@ import './index.css';
 //   document.getElementById('root')
 // );
 
-// Composing Components END
+// Composing Components ***** END *****
 
-// State START
+// ************************* S E C T I O N - V *************************
+
+// State ***** START *****
 
 // Before adding state
 // class Welcome extends React.Component {
@@ -77,22 +90,41 @@ import './index.css';
 // );
 
 // After adding state
-class Welcome extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: 'initial state'
-    };
-  }
+// class Welcome extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       name: 'initial state'
+//     };
+//   }
 
-  render() {
-    return <h1>Hello, {this.state.name}</h1>
-  }
-}
+//   render() {
+//     return <h1>Hello, {this.state.name}</h1>
+//   }
+// }
 
-ReactDOM.render(
-  <Welcome />,
-  document.getElementById('root')
-);
+// ReactDOM.render(
+//   <Welcome />,
+//   document.getElementById('root')
+// );
 
-// State END
+// State ***** END *****
+
+// ************************* S E C T I O N - VI *************************
+
+// Lifting State Up ***** START *****
+
+// {BEFORE} State is present in each on the individual components - message-bot.jsx 
+// (file extensions - jsx & js are interchangeable ... js is the standard now)
+// ReactDOM.render(
+//     <MessageBot />,
+//     document.getElementById('root')
+// );
+
+// {AFTER} State is in the parent now - message-bot-fixed.js
+// ReactDOM.render(
+//     <MessageBotFixed />,
+//     document.getElementById('root')
+// );
+
+// Lifting State Up ***** END *****
